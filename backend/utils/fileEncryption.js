@@ -5,3 +5,5 @@ function encrypt(buffer, password) {
   const encrypted = Buffer.concat([cipher.update(buffer), cipher.final()]);
   return encrypted;
 }
+
+//testing the made changes 2.58am 20th may
