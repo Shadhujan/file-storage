@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const axios = require('axios');
 const express = require('express');
+const cors = require('cors');
 const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const crypto = require('crypto');
@@ -13,6 +14,8 @@ const { chunkFile } = require('./utils/fileChunking');
 const { encrypt } = require('./utils/fileEncryption');
 
 const app = express();
+
+app.use(cors());
 
 const db = require('./database');
 
